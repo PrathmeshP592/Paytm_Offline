@@ -1,0 +1,4 @@
+#Mon Feb 19 09:13:11 IST 2024
+base.0=E\:\\Paytm_Offline\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
