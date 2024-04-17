@@ -27,7 +27,8 @@ class PaytmHomePage extends StatelessWidget {
                   color: Colors.blue,
                   padding: EdgeInsets.symmetric(vertical: 10),
                   child: ListTile(
-                    leading: Icon(Icons.account_circle, color: Colors.white, size: 40),
+                    leading: Icon(Icons.account_circle,
+                        color: Colors.white, size: 40),
                     title: Text(
                       'Prathamesh Pawar',
                       style: TextStyle(color: Colors.white, fontSize: 20),
@@ -49,7 +50,7 @@ class PaytmHomePage extends StatelessWidget {
                 Divider(),
                 ListTile(
                   leading: Icon(Icons.money),
-                  title: Text('Add Money'),
+                  title: Text('Add Money to Bank'),
                   onTap: () {
                     // Navigate to add money screen
                   },
@@ -60,7 +61,8 @@ class PaytmHomePage extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => PaymentOptionsPage()),
+                      MaterialPageRoute(
+                          builder: (context) => PaymentOptionsPage()),
                     );
                   },
                 ),
@@ -135,7 +137,8 @@ class PaymentOptionsPage extends StatelessWidget {
                 // Navigate to credit card payment page
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => CreditCardPaymentPage()),
+                  MaterialPageRoute(
+                      builder: (context) => CreditCardPaymentPage()),
                 );
               },
               child: Text('Credit Card'),
@@ -248,7 +251,8 @@ class UPITransferPage extends StatelessWidget {
                 // Handle action when internet connectivity is lost
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => InternetConnectivityLostPage()),
+                  MaterialPageRoute(
+                      builder: (context) => InternetConnectivityLostPage()),
                 );
               },
             ),
@@ -273,10 +277,13 @@ class InternetConnectivityLostPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Generate a demo bank balance image
-                String imagePath = 'assets/demo_bank_balance_image.png'; // Static image representing Rs. 100 bank balance
+                String imagePath =
+                    'assets/demo_bank_balance_image.png'; // Static image representing Rs. 100 bank balance
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BankBalanceImagePage(imagePath: imagePath)),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          BankBalanceImagePage(imagePath: imagePath)),
                 );
               },
               child: Text('Generate Bank Balance Image'),
@@ -296,7 +303,8 @@ class InternetConnectivityLostPage extends StatelessWidget {
 class BankBalanceImagePage extends StatelessWidget {
   final String imagePath;
 
-  const BankBalanceImagePage({Key? key, required this.imagePath}) : super(key: key);
+  const BankBalanceImagePage({Key? key, required this.imagePath})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
